@@ -48,7 +48,7 @@ function App() {
         </Route>
         <Route path='/noticias' element={<RutaProtegida />}>
           <Route index element={<Noticias />}/>
-        </Route>
+        </Route> 
       </Routes>
       </AuthProvider>
     </BrowserRouter>

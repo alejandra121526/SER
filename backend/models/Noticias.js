@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const noticiaSchema = mongoose.Schema({
+const noticiaSchema =new mongoose.Schema({
     titulo: {
         type: String,
         required: true,
@@ -11,14 +11,14 @@ const noticiaSchema = mongoose.Schema({
         required: true,
         trim: true
     },
-    imagenUrl: {
+    imagenUrl: [{
         type: String
-   },
+      }],
    /**objectId incrementable */
    autor:{
        type: mongoose.Schema.Types.ObjectId,
        ref: "Usuario",
-       required: true
+    //    required: true
    },
 },
 /*fecha de creacion y actualizacion*/
